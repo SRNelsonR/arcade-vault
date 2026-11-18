@@ -41,7 +41,7 @@ export function seededScores(seed: number, count = 12): ScoreRow[] {
     .map((r, i) => ({ ...r, rank: i + 1 }));
 }
 
-function formatDate(ms: number): string {
+export function formatDate(ms: number): string {
   const d = new Date(ms);
   const dd = String(d.getDate()).padStart(2, "0");
   const mm = String(d.getMonth() + 1).padStart(2, "0");
