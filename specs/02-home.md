@@ -1,6 +1,6 @@
 # SPEC 02 — Página de inicio (Home) de Arcade Vault
 
-> **Estado:** Aprobado
+> **Estado:** Implementado
 > **Depende de:** SPEC 01
 > **Fecha:** 2026-11-23
 > **Objetivo:** Implementar en Next.js la landing `Home` de `references/templates/home-about/` en `/`, moviendo la Biblioteca a `/games`, con datos mock estáticos y sin implementar la página About.
@@ -96,28 +96,28 @@ Cada paso deja la app arrancable con `npm run dev`.
 
 ## Criterios de aceptación
 
-- [ ] `npm run build`, `npm run lint` y `npx tsc --noEmit` terminan sin errores.
-- [ ] `/` muestra el hero con las tres líneas del título, los dos CTAs y las 8 siluetas flotantes.
-- [ ] `/` muestra las secciones `// 01`, `// 02`, `// 03` y `// 04`, la franja de estadísticas y el CTA final "¿LISTO PARA JUGAR?".
-- [ ] La sección `// 01` muestra 4 tarjetas: JUEGOS CLÁSICOS, 100% GRATIS, LADDER BOARDS y SIEMPRE CRECIENDO.
-- [ ] La sección `// 02` muestra exactamente 6 mini-tarjetas, con los 6 primeros juegos de `GAMES`.
-- [ ] Hacer clic en una mini-tarjeta navega a `/juegos/[id]` del juego correcto.
-- [ ] El primer bloque de estadísticas muestra `8` y `JUEGOS`; los otros dos coinciden con el template.
-- [ ] El ticker muestra 7 filas y el top de hoy 5 filas, con los puntajes formateados con `es-ES` (ej. `+184.220`, `312.840`).
-- [ ] "VER SALÓN →" navega a `/salon`.
-- [ ] "EXPLORAR JUEGOS", "VER TODOS LOS JUEGOS →" e "INSERTAR MONEDA →" navegan a `/games`.
-- [ ] "CREAR CUENTA" y "EMPEZAR GRATIS →" navegan a `/acceso`, con o sin sesión.
-- [ ] `/games` muestra la Biblioteca con sus 8 tarjetas, búsqueda y chips funcionando como en el SPEC 01.
-- [ ] `/` ya no muestra la grilla ni el buscador de la Biblioteca.
-- [ ] Los enlaces "VOLVER AL VAULT" (Detalle, Reproductor, Salón y 404) navegan a `/games`.
-- [ ] El nav muestra "Inicio", "Biblioteca" y "Salón de la Fama" y no muestra "Acerca de".
-- [ ] "Inicio" está resaltado solo en `/`; "Biblioteca" solo en `/games`, `/juegos/*` y `/jugar/*`; "Salón de la Fama" solo en `/salon`.
-- [ ] Al hacer scroll, las secciones con `reveal` pasan de invisibles a visibles (clase `in`).
-- [ ] Con `IntersectionObserver` indefinido, todas las secciones del Home quedan visibles.
+- [x] `npm run build`, `npm run lint` y `npx tsc --noEmit` terminan sin errores.
+- [x] `/` muestra el hero con las tres líneas del título, los dos CTAs y las 8 siluetas flotantes.
+- [x] `/` muestra las secciones `// 01`, `// 02`, `// 03` y `// 04`, la franja de estadísticas y el CTA final "¿LISTO PARA JUGAR?".
+- [x] La sección `// 01` muestra 4 tarjetas: JUEGOS CLÁSICOS, 100% GRATIS, LADDER BOARDS y SIEMPRE CRECIENDO.
+- [x] La sección `// 02` muestra exactamente 6 mini-tarjetas, con los 6 primeros juegos de `GAMES`.
+- [x] Hacer clic en una mini-tarjeta navega a `/juegos/[id]` del juego correcto.
+- [x] El primer bloque de estadísticas muestra `8` y `JUEGOS`; los otros dos coinciden con el template.
+- [x] El ticker muestra 7 filas y el top de hoy 5 filas, con los puntajes formateados con `es-ES` (ej. `+184.220`, `312.840`).
+- [x] "VER SALÓN →" navega a `/salon`.
+- [x] "EXPLORAR JUEGOS", "VER TODOS LOS JUEGOS →" e "INSERTAR MONEDA →" navegan a `/games`.
+- [x] "CREAR CUENTA" y "EMPEZAR GRATIS →" navegan a `/acceso`, con o sin sesión.
+- [x] `/games` muestra la Biblioteca con sus 8 tarjetas, búsqueda y chips funcionando como en el SPEC 01.
+- [x] `/` ya no muestra la grilla ni el buscador de la Biblioteca.
+- [x] Los enlaces "VOLVER AL VAULT" (Detalle, Reproductor, Salón y 404) navegan a `/games`.
+- [x] El nav muestra "Inicio", "Biblioteca" y "Salón de la Fama" y no muestra "Acerca de".
+- [x] "Inicio" está resaltado solo en `/`; "Biblioteca" solo en `/games`, `/juegos/*` y `/jugar/*`; "Salón de la Fama" solo en `/salon`.
+- [x] Al hacer scroll, las secciones con `reveal` pasan de invisibles a visibles (clase `in`).
+- [x] Con `IntersectionObserver` indefinido, todas las secciones del Home quedan visibles.
 - [ ] Recargar `/` no produce errores de hydration en la consola.
 - [ ] En ancho ≤ 768 px el Home no tiene scroll horizontal y el panel móvil incluye "Inicio".
-- [ ] `globals.css` no contiene reglas `.about-*`, `.gp-*`, `.dp-*` ni `.contact-*` nuevas.
-- [ ] No existe ninguna ruta `/about` ni referencia a ella en el código.
+- [x] `globals.css` no contiene reglas `.about-*`, `.gp-*`, `.dp-*` ni `.contact-*` nuevas.
+- [x] No existe ninguna ruta `/about` ni referencia a ella en el código.
 
 ---
 
